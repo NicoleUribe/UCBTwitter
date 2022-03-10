@@ -11,10 +11,23 @@ form.addEventListener("submit", (event) => {
     div.innerHTML = `<p> No es posible publicar un post sin título <p>`;
   }
   else{
-    div.innerHTML =`<p>Publicación <p> 
+    if(tittle.value == "post numero 1"){
+      div.innerHTML =`<p>Publicación <p> 
+    <p>Titulo: ${tittle.value}<p>
+    <p>Detalle: ${text_.value}</p>
+    <p>Titulo: Post número 2<p>
+    <p>Detalle: </p>`;
+
+    }
+    else{
+      div.innerHTML =`<p>Publicación <p> 
     <p>Titulo: ${tittle.value}<p>
     <p>Detalle: ${text_.value}</p>`;
+    }
+
+    
   }
+
 });
   
   
