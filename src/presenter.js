@@ -7,8 +7,14 @@ const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  div.innerHTML =`<p>Publicación <p> 
-                  <p>Titulo: ${tittle.value}<p>
-                  <p>Detalle: ${text_.value}</p>`;
+  if(tittle.value == ""){
+    div.innerHTML = `<p> No es posible publicar un post sin título <p>`;
+  }
+  else{
+    div.innerHTML =`<p>Publicación <p> 
+    <p>Titulo: ${tittle.value}<p>
+    <p>Detalle: ${text_.value}</p>`;
+  }
 });
+  
+  
